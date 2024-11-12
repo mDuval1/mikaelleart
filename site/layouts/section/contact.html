@@ -5,16 +5,18 @@
 
 		<img src="{{ .Params.logo }}" alt="" class="db w4 center pv4">
 
-		{{ .Content }}
 
-		<div class="flex-ns mb3">
-	        	{{ range .Params.contact_entries }}
-				<div>
-					<h4 class="f4 b lh-title mb2 primary">{{ .heading }}</h4>
-					<p>{{ .text }}</p>
-				</div>
+		<div class="flex-ns flex-column items-center mb3">
+			{{ range .Params.contact_entries }}
+			<div class="flex-ns flex-row">
+				<h4 class="i mr2">{{ .heading }}</h4>
+				<p>{{ .text }}</p>
+			</div>
 			{{ end }}
+			<p>Ile de La Réunion - France</p>
 		</div>
+
+		{{ .Content }}
 
 		{{ partial "contact-form" . }}
 

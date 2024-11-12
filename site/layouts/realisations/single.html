@@ -1,0 +1,18 @@
+{{ define "main" }}
+
+<div class="mw7 center ph3 pv4">
+  {{ with .Resources.Get .Params.image }}<img src="{{ .RelPermalink }}" alt="{{ $.Title }}" />{{ end }}
+  <div class="flex-m flex-column-m justify-center-m items-center-m">
+    <br />
+    <h3 class="f4 i lh-title mb3 ">{{.Title}}</h3>
+    <h3 class="f4 i lh-title mb3">{{.Params.title_creole}}</h3>
+    <br />
+    <span>•</span>
+    <p>{{ .Params.support }}</p>
+    <p>{{ .Params.size }}</p>
+    <span>•</span>
+    <br />
+    <p>{{ .Params.year }}</p>
+  </div>
+</div>
+{{ end }}
